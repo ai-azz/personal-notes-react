@@ -1,6 +1,6 @@
 # 📂 Personal Notes App!
 
-**Personal Notes App** is a simple yet elegant note-taking application that helps you organize your thoughts, tasks, and ideas. With its simple and intuitive design and responsive UI, managing your notes has never been easier.
+**Personal Notes App** is a simple yet elegant note-taking application that helps you organize your thoughts, tasks, and ideas. With its simple and intuitive design and responsive UI, managing your notes has never been easier. 
 
 ---
 
