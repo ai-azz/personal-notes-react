@@ -5,6 +5,7 @@ import { getInitialData } from '../utils';
 
 function NoteApp() {
   const [notes, setNotes] = useState(getInitialData());
+  const [searchKeyword, setSearchKeyword] = useState('');
 
   const addNote = (note) => {
     setNotes((prevNotes) => [...prevNotes, note]);
@@ -22,11 +23,19 @@ function NoteApp() {
     );
   };
 
+  const onSearchChange = (keyword) => {
+    setSearchKeyword(keyword);
+  };
+
+  const filteredNotes = notes.filter((note) =>
+    note.title.toLowerCase().includes(searchKeyword.toLowerCase())
+  );
+
   return (
     <div className="note-app">
-      <NoteHeader />
+      <NoteHeader searchKeyword={searchKeyword} onSearchChange={onSearchChange} />
       <NoteBody
-        notes={notes}
+        notes={filteredNotes}
         addNote={addNote}
         deleteNote={deleteNote}
         archiveNote={archiveNote}
